@@ -6,6 +6,7 @@ sounds.forEach((sound) => {
   const btn = document.createElement('button');
   btn.classList.add('btn');
   btn.innerText = sound;
+btn.innerHTML = `<audio controls><source src="./sounds/${sound}.mp3</audio>" type="audio/mpeg">`
   btn.addEventListener('click', () => {
     stopSounds();
     audioElements[sound].play();
